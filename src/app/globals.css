@@ -16,9 +16,6 @@ body {
   color: var(--light-gray);
 }
 
-a{
-  color: var(--light-gray);
-}
 h1 {
   color: var(--bright-cyan);
 }

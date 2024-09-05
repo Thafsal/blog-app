@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",

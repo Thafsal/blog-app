@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
   list-style: none;
 }
 .logout_btn {
@@ -20,6 +20,10 @@ display: none;
 
     .links {
         display: none;
+    }
+    .menutoggle{
+        display: block;
+        cursor: pointer;
     }
     .mobileLinks {
         position: absolute;

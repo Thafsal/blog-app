@@ -1,9 +1,9 @@
 :root {
   --dark-background: #0b0c10f2;
   --dark-gray-blue: #1f2833;
-  --light-gray: #c5c6c7;
-  --bright-cyan: #66fcf1;
-  --desaturated-cyan: #45a29e;
+  --light-gray: #e8eaeb;
+  --bright-cyan: #24847eea;
+  --desaturated-cyan: #769795;
 }
 * {
   margin: 0;

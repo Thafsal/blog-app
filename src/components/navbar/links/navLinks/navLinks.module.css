@@ -10,7 +10,7 @@
   position: relative;
 }
 
-.container::after {
+/* .container::after {
   content: "";
   position: absolute;
   left: 0;
@@ -19,13 +19,13 @@
   height: 2px;
   background-color: var(--light-gray); 
   transition: width 0.9s ease; 
-}
+} */
 
 
 
 .active {
-  background-color: var(--dark-gray-blue);
-  color: var(--desaturated-cyan);
+  background-color: var(--desaturated-cyan);
+  color: var(--dark-gray-blue);
 }
 
 .active::after {

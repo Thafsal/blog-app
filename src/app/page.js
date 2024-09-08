@@ -1,11 +1,11 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./home.module.css";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <h1 className={styles.title}>Welcome to THOUGHTSPIRE</h1>
+        <h1 className={styles.title}>Welcome to <span className={styles.highlight}>THOUGHT</span>SPIRE</h1>
         <p className={styles.desc}>
           Ignite your mind with inspiring content, insightful thoughts, and
           diverse ideas from across the globe. Dive into a world where knowledge
@@ -19,7 +19,7 @@ export default function Home() {
           <Image src="/brands.png" alt="" fill className={styles.brandsImg} />
         </div>
       </div>
-      <div className={styles.imageContainer}>
+      <div className={styles.imgContainer}>
         <Image src="/flying.gif" width={450} height={450} alt="logo" />
       </div>
     </div>

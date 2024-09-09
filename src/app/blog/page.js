@@ -1,9 +1,14 @@
-import React from 'react'
+import PostCard from "@/components/postCard/PostCard";
+import styles from "./blog.module.css";
 
-const page = () => {
+const blogPost = () => {
   return (
-    <div>blog</div>
-  )
-}
+    <div className={styles.container}>
+      <div className={styles.post} key={post.id}>
+        <PostCard />
+      </div>
+    </div>
+  );
+};
 
-export default page
+export default blogPost;

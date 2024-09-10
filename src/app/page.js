@@ -20,7 +20,7 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.imgContainer}>
-        <Image src="/flying.gif" width={450} height={450} alt="logo" />
+        <Image src="/flying.gif" width={450} height={450} alt="logo"  className={styles.img}/>
       </div>
     </div>
   );

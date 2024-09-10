@@ -21,9 +21,12 @@ display: none;
     .links {
         display: none;
     }
-    .menutoggle{
-        display: block;
-        cursor: pointer;
+    .menutoggle {
+      display: block;
+      cursor: pointer;
+      position: absolute; 
+      top: 30px; 
+      right: 20px; 
     }
     .mobileLinks {
         position: absolute;
@@ -40,3 +43,10 @@ display: none;
         list-style: none;
     }
 }
+@media  screen and (max-width: 450px) {
+  .menutoggle {
+    top: 20px;
+    right: 10px; /* Adjust this for smaller screen widths */
+}
+}
+  

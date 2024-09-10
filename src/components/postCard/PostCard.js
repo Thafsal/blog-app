@@ -17,7 +17,7 @@ const PostCard = () => {
       <div className={styles.top}>
         {dummyPost.img && (
           <div className={styles.imgContainer}>
-            <Image src={dummyPost.img} alt="Sample image" fill className={styles.img} />
+            <Image src="/about.png" alt="Sample image" fill className={styles.img} />
           </div>
         )}
         <span className={styles.date}>{dummyPost.createdAt.slice(5, 16)}</span>

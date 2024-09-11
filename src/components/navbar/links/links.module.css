@@ -46,7 +46,7 @@ display: none;
 @media  screen and (max-width: 450px) {
   .menutoggle {
     top: 20px;
-    right: 10px; /* Adjust this for smaller screen widths */
+    right: 10px; 
 }
 }
   

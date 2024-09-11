@@ -1,48 +1,52 @@
 "use client";
+
 import { useState } from "react";
 import styles from "./links.module.css";
-import { NavLinks } from "./navLinks/NavLinks";
+import NavLink from "./navLinks/NavLinks";
 import Image from "next/image";
+import { handleLogout } from "@/lib/action";
 
-const link_name = [
+const links = [
   {
-    title: "Home",
+    title: "Homepage",
     path: "/",
   },
-
   {
     title: "About",
     path: "/about",
-  },
-
-  {
-    title: "Blogs",
-    path: "/blog",
   },
   {
     title: "Contact",
     path: "/contact",
   },
+  {
+    title: "Blog",
+    path: "/blog",
+  },
 ];
 
-const session = true;
-const isAdmin = true;
+const Links = ({session}) => {
+  const [open, setOpen] = useState(false);
 
-const Links = () => {
-  const [open, setIsOpen] = useState(false);
+  // TEMPORARY
+  // const session = true;
+  // const isAdmin = true;
+
   return (
     <div className={styles.container}>
       <div className={styles.links}>
-        {link_name.map((link) => (
-          <NavLinks item={link} key={link.title} />
+        {links.map((link) => (
+          <NavLink item={link} key={link.title} />
         ))}
-        {session ? (
+        {session?.user ? (
           <>
-            {isAdmin && <NavLinks item={{ title: "Admin", path: "/admin" }} />}
-            <button className={styles.logout_btn}>Logout</button>
+            {session.user?.isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
+            <form action={handleLogout}>
+              <button className={styles.logout}>Logout</button>
+            </form>
           </>
         ) : (
-          <NavLinks item={{ title: "Login", path: "/login" }} />
+          <NavLink item={{ title: "Login", path: "/login" }} />
         )}
       </div>
       <Image
@@ -58,16 +62,6 @@ const Links = () => {
           {link_name.map((link) => (
             <NavLinks item={link} key={link.title} />
           ))}
-          {session ? (
-            <>
-              {isAdmin && (
-                <NavLinks item={{ title: "Admin", path: "/admin" }} />
-              )}
-              <button className={styles.logout_btn}>Logout</button>
-            </>
-          ) : (
-            <NavLinks item={{ title: "Login", path: "/login" }} />
-          )}
         </div>
       )}
     </div>

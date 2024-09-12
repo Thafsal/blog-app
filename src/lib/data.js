@@ -28,8 +28,12 @@ export const getPosts = async () => {
 
 export const getPost = async (slug) => {
   try {
+    const decodedSlug = decodeURIComponent(slug);
+
     connectToDb();
-    const post = await Post.findOne({ slug });
+    
+    const post = await Post.findOne({ slug :decodedSlug});
+
     return post;
   } catch (err) {
     console.log(err);

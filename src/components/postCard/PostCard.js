@@ -1,15 +1,20 @@
 import Image from "next/image"
-import styles from "./postCard.module.css"
+import styles from "./PostCard.module.css"
 import Link from "next/link"
 
 const PostCard = ({post}) => {
+  const formattedDate = new Date(post.createdAt).toLocaleDateString('en-US', {
+    day: 'numeric',  
+    month: 'short',
+    year: 'numeric' 
+  });
   return (
     <div className={styles.container}>
       <div className={styles.top}>
         {post.img && <div className={styles.imgContainer}>
           <Image src={post.img} alt="" fill className={styles.img}/>
         </div>}
-        <span className={styles.date}>{post.createdAt?.toString().slice(4, 16)}</span>
+        <span className={styles.date}>{formattedDate}</span>
       </div>
       <div className={styles.bottom}>
         <h1 className={styles.title}>{post.title}</h1>

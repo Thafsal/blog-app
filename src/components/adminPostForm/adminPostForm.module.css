@@ -2,22 +2,31 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  background-color:rgb(30 33 36 / 67%);
 }
 
 .container input,
 .container textarea,
 .container select {
   padding: 20px;
-  background-color: var(--bgSoft);
+  background-color: var(--dark-background);
   border: none;
   border-radius: 5px;
   color: var(--textColor);
+  margin: 0px 20px;
+}
+.container h1 {
+  color: var(--bright-cyan);
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-weight: 400;
 }
 
 .container button {
   padding: 20px;
   cursor: pointer;
-  background-color: var(--btn);
+  background-color: var(--bright-cyan);
   border: none;
   border-radius: 5px;
   color: var(--textColor);

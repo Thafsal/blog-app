@@ -23,8 +23,8 @@ export const generateMetadata = async ({ params }) => {
 
 
   return {
-    title: post.title,
-    description: post.desc,
+    title: post?.title,
+    description: post?.desc,
   };
 };
 
@@ -33,11 +33,17 @@ const SinglePostPage = async ({ params }) => {
 
   // FETCH DATA WITH AN API
   const post = await getData(slug);
-  const formattedDate = new Date(post.createdAt).toLocaleDateString('en-US', {
-    day: 'numeric', 
-    month: 'short',  
-    year: 'numeric' 
-  });
+  if (!post || !post.createdAt) {
+    return <div>Post not found or invalid data.</div>;
+  }
+
+  const formattedDate = post.createdAt
+  ? new Date(post.createdAt).toLocaleDateString('en-US', {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
+    })
+  : 'Unknown date';
 
   // FETCH DATA WITHOUT AN API
   // const post = await getPost(slug);

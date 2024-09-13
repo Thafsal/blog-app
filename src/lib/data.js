@@ -29,6 +29,7 @@ export const getPosts = async () => {
 export const getPost = async (slug) => {
   try {
     const decodedSlug = decodeURIComponent(slug);
+    console.log(decodedSlug)
 
     connectToDb();
     

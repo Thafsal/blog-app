@@ -6,11 +6,7 @@ import { getPost } from "@/lib/data";
 
 // FETCH DATA WITH AN API
 const getData = async (slug) => {
-  const formattedDate = new Date(post.createdAt).toLocaleDateString('en-US', {
-    day: 'numeric', 
-    month: 'short',  
-    year: 'numeric' 
-  });
+
   const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
 
   if (!res.ok) {
@@ -37,6 +33,11 @@ const SinglePostPage = async ({ params }) => {
 
   // FETCH DATA WITH AN API
   const post = await getData(slug);
+  const formattedDate = new Date(post.createdAt).toLocaleDateString('en-US', {
+    day: 'numeric', 
+    month: 'short',  
+    year: 'numeric' 
+  });
 
   // FETCH DATA WITHOUT AN API
   // const post = await getPost(slug);

@@ -1,6 +1,6 @@
 import Link from "next/link"
-import Links from "./links/Links"
 import styles from "./Navbar.module.css"
+import Links from "./links/Links"
 import { auth } from "@/lib/auth";
 import Image from "next/image";
 

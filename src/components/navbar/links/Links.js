@@ -25,7 +25,7 @@ const links = [
   },
 ];
 
-const Links = ({session}) => {
+export const Links = ({session}) => {
   const [open, setOpen] = useState(false);
 
   // TEMPORARY

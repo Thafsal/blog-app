@@ -11,10 +11,10 @@ export const metadata = {
   keywords: "Thoughtspire, inspiration, ideas, creativity, innovation, blogs, resources, articles",
   author: "Thoughtspire Team",
   icons: {
-    icon: "/favicon.ico", 
+    icon: "./favicon1.png", 
   },
 };
-  
+
 
 export default function RootLayout({ children }) {
   return (

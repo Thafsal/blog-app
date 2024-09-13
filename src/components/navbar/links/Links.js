@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./Links.module.css";
-import NavLink from "./navLinks/navLinks";
+import NavLink from "./navLinks/NavLinks";
 import Image from "next/image";
 import { handleLogout } from "@/lib/action";
 

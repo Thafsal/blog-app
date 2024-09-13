@@ -7,7 +7,7 @@ export const GET = async (request) => {
     connectToDb();
 
     const posts = await Post.find();
-    console.log(posts);
+    console.log(posts , "err from route");
     return NextResponse.json(posts);
   } catch (err) {
     console.log(err);

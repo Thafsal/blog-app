@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./Links.module.css"
+import  "./Links.css"
 import { useState } from "react";
 import NavLink from "./navLinks/NavLinks";
 import Image from "next/image";
@@ -33,8 +33,8 @@ export const Links = ({session}) => {
   // const isAdmin = true;
 
   return (
-    <div className={styles.container}>
-      <div className={styles.links}>
+    <div className=".container">
+      <div className=".links">
         {links.map((link) => (
           <NavLink item={link} key={link.title} />
         ))}
@@ -42,7 +42,7 @@ export const Links = ({session}) => {
           <>
             {session.user?.isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
             <form action={handleLogout}>
-              <button className={styles.logout}>Logout</button>
+              <button className=".logout">Logout</button>
             </form>
           </>
         ) : (
@@ -50,7 +50,7 @@ export const Links = ({session}) => {
         )}
       </div>
       <Image
-        className={styles.menuButton}
+        className=".menuButton"
         src="/menu.png"
         alt=""
         width={30}
@@ -58,7 +58,7 @@ export const Links = ({session}) => {
         onClick={() => setOpen((prev) => !prev)}
       />
       {open && (
-        <div className={styles.mobileLinks}>
+        <div className=".mobileLinks">
           {links.map((link) => (
             <NavLink item={link} key={link.title} />
           ))}
@@ -66,7 +66,7 @@ export const Links = ({session}) => {
           <>
             {session.user?.isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
             <form action={handleLogout}>
-              <button className={styles.logout}>Logout</button>
+              <button className=".logout">Logout</button>
             </form>
           </>
         ) : (
